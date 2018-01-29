@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,400,700" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <style>
+      :root {
+        --blue: #5bc0de;
+        --gray: #464646;
+      }
+
+      body {
+        font-family: 'Nunito', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gray);
+      }
+
+      button {
+        background: var(--blue);
+        color: white;
+        border: 2px solid var(--blue);
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      main {
+        text-align: center;
+        max-width: 600px;
+      }
+
+      button:hover {
+        background: white;
+        color: var(--blue);
+      }
+
+      #messageBox {
+        display: block;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <main>
+      <h1>Process a Stripe Charge w/ a Netlify Lambda Function</h1>
+      <button>Click to Buy! <strong>$10</strong></button>
+      <div id="messageBox">
+        <h2></h2>
+      </div>
+    </main>
+
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="./bundle.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,24 @@
+[build]
+  command = "npm run build"
+  publish = "src"
+  functions = "lambda"
+
+[context.base.environment]
+  LAMBDA_ENDPOINT = "http://localhost:9000/"
+  STRIPE_PUBLISHABLE_KEY = "pk_test_QNJ7Z7GtqgKm7xPp7WkkG5uM"
+  STRIPE_SECRET_KEY = "sk_test_2USIa69ZqEGr9YkaUo4JsNGN"
+
+[context.branch-deploy.environment]
+  LAMBDA_ENDPOINT = "https://netlify-lambda.netlify.com/.netlify/functions/"
+  STRIPE_PUBLISHABLE_KEY = "pk_test_CmgAzI4lJOsVX3ls4n6g1bDy"
+  STRIPE_SECRET_KEY = "sk_test_2USIa69ZqEGr9YkaUo4JsNGN"
+
+[context.deploy-preview.environment]
+  LAMBDA_ENDPOINT = "https://netlify-lambda.netlify.com/.netlify/functions/"
+  STRIPE_PUBLISHABLE_KEY = "pk_test_CmgAzI4lJOsVX3ls4n6g1bDy"
+  STRIPE_SECRET_KEY = "sk_test_2USIa69ZqEGr9YkaUo4JsNGN"
+
+[context.production.environment]
+  LAMBDA_ENDPOINT = "https://netlify-lambda.netlify.com/.netlify/functions/"
+  STRIPE_PUBLISHABLE_KEY = "your-production-pubishable-key"
+  STRIPE_SECRET_KEY = "your-production-secret-key"
