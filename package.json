@@ -6,12 +6,12 @@
   },
   "dependencies": {
     "stripe": "^5.4.0",
+    "toml": "^2.3.3",
     "uuid": "^3.2.1"
   },
   "devDependencies": {
     "concurrently": "^3.5.1",
     "netlify-lambda": "^0.2.0",
-    "toml": "^2.3.3",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
   }

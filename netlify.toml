@@ -20,5 +20,5 @@
 
 [context.production.environment]
   LAMBDA_ENDPOINT = "https://netlify-lambda.netlify.com/.netlify/functions/"
-  STRIPE_PUBLISHABLE_KEY = "your-production-pubishable-key"
-  STRIPE_SECRET_KEY = "your-production-secret-key"
+  STRIPE_PUBLISHABLE_KEY = "pk_test_CmgAzI4lJOsVX3ls4n6g1bDy"
+  STRIPE_SECRET_KEY = "sk_test_2USIa69ZqEGr9YkaUo4JsNGN"
