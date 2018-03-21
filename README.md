@@ -18,7 +18,7 @@ Run `yarn run dev` to locally serve the page at `http://localhost:8080`, as well
 After both of these processes are running, you'll be able to process a test purchase with Stripe. For your card number, use `4242424242424242`.
 
 ## See the Example
-It's right [here](https://netlify-lambda.netlify.com).
+https://netlify-lambda.netlify.com
 
 ## License
 MIT © [Alex MacArthur](https://macarthur.me)

@@ -1,11 +1,6 @@
-const fs = require("fs");
-const toml = require('toml');
-const config = toml.parse(fs.readFileSync('netlify.toml'));
+require('dotenv').config();
 
-const SECRET_KEY = process.env.STRIPE_SECRET_KEY !== undefined
-  ? process.env.STRIPE_SECRET_KEY
-  : config.context.base.environment.STRIPE_SECRET_KEY;
-const stripe = require('stripe')(SECRET_KEY);
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const statusCode = 200;
 const headers = {
