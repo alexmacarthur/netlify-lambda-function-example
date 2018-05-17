@@ -1,7 +1,7 @@
 {
   "scripts": {
     "lambda-serve": "netlify-lambda serve lambda-src",
-    "build": "NODE_ENV=production webpack && cp -a ./lambda-src/. ./lambda/ netlify-lambda build lambda",
+    "build": "NODE_ENV=production webpack && cp -a ./lambda-src/. ./lambda/ && netlify-lambda build lambda",
     "dev": "NODE_ENV=development concurrently \"webpack-dev-server --content-base src/\" \"yarn run lambda-serve\"",
     "test": "echo 'No tests are currently configured.'"
   },
