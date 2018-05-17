@@ -1,12 +1,12 @@
 {
   "scripts": {
-    "copy": "cp lambda-src/purchase.js lambda/purchase.js",
-    "lambda-serve": "yarn run copy && netlify-lambda serve lambda",
-    "build": "NODE_ENV=production webpack && yarn run copy && netlify-lambda build lambda",
+    "lambda-serve": "netlify-lambda serve lambda-src",
+    "build": "NODE_ENV=production webpack && cp -a ./lambda-src/. ./lambda/ && netlify-lambda build lambda",
     "dev": "NODE_ENV=development concurrently \"webpack-dev-server --content-base src/\" \"yarn run lambda-serve\"",
     "test": "echo 'No tests are currently configured.'"
   },
   "dependencies": {
+    "babel-loader": "^7.1.4",
     "dotenv": "^5.0.1",
     "stripe": "^5.4.0",
     "toml": "^2.3.3",
