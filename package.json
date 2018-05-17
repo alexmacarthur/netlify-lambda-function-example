@@ -9,7 +9,6 @@
     "babel-loader": "^7.1.4",
     "dotenv": "^5.0.1",
     "stripe": "^5.4.0",
-    "toml": "^2.3.3",
     "uuid": "^3.2.1"
   },
   "devDependencies": {
