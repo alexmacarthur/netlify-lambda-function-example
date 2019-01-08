@@ -6,15 +6,18 @@
     "test": "echo 'No tests are currently configured.'"
   },
   "dependencies": {
-    "babel-loader": "^7.1.4",
     "dotenv": "^5.0.1",
+    "netlify-lambda": "^1.1.1",
     "stripe": "^5.4.0",
     "uuid": "^3.2.1"
   },
   "devDependencies": {
-    "concurrently": "^3.5.1",
-    "netlify-lambda": "^0.2.0",
-    "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.1"
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.5",
+    "concurrently": "^4.1.0",
+    "webpack": "^4.28.1",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
   }
 }

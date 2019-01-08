@@ -1,12 +1,13 @@
-require('dotenv').config();
+require("dotenv").config();
 
-const webpack = require('webpack');
+const webpack = require("webpack");
 
 module.exports = {
-  entry: './src/scripts.js',
+  mode: process.env.NODE_ENV === "production" ? "production" : "development",
+  entry: "./src/scripts.js",
   output: {
-    path: __dirname + '/src',
-    filename: 'bundle.js'
+    path: __dirname + "/src",
+    filename: "bundle.js"
   },
   plugins: [
     new webpack.DefinePlugin({
