@@ -10,7 +10,9 @@ A full walkthrough of this example can be found on my blog:
 https://macarthur.me/posts/building-a-lambda-function-with-netlify
 
 ## Install
-After making sure you have Yarn installed on your machine, run `yarn install`.
+1. Ensure you have [Netlify Dev](https://www.netlify.com/products/dev) installed on your machine.
+
+<!-- netlify dev --live -->
 
 ## Usage
 Run `yarn run dev` to locally serve the page at `http://localhost:8080`, as well as the function at `http://locahost:9000/purchase`.

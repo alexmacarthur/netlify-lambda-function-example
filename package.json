@@ -1,23 +1,22 @@
 {
+  "version": "0.0.0",
   "scripts": {
-    "lambda-serve": "netlify-lambda serve lambda-src",
-    "build": "NODE_ENV=production webpack && netlify-lambda build lambda-src",
+    "build": "NODE_ENV=production webpack",
     "dev": "NODE_ENV=development concurrently \"webpack-dev-server --content-base src/\" \"yarn run lambda-serve\"",
     "test": "echo 'No tests are currently configured.'"
   },
   "dependencies": {
     "dotenv": "^5.0.1",
-    "netlify-lambda": "^1.1.1",
     "stripe": "^5.4.0",
     "uuid": "^3.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
     "babel-loader": "^8.0.5",
     "concurrently": "^4.1.0",
-    "webpack": "^4.28.1",
-    "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14"
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.3.1"
   }
 }
