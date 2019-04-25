@@ -1,5 +1,4 @@
 src/bundle.js
-lambda/*
 .netlify
 node_modules
 dist
