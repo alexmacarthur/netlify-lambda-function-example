@@ -37,8 +37,10 @@ exports.handler = async function(event, context, callback) {
     };
   }
 
+  let charge;
+
   try {
-    const charge = await stripe.charges.create(
+    charge = await stripe.charges.create(
       {
         currency: "usd",
         amount: data.amount,

@@ -4,7 +4,7 @@ const webpack = require("webpack");
 
 module.exports = {
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
-  entry: "./src/scripts.js",
+  entry: "./src/front-end.js",
   output: {
     path: __dirname + "/src",
     filename: "bundle.js"
@@ -15,4 +15,4 @@ module.exports = {
       STRIPE_PUBLISHABLE_KEY: JSON.stringify(process.env.STRIPE_PUBLISHABLE_KEY)
     })
   ]
-}
+};

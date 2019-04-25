@@ -15,32 +15,37 @@ const handler = StripeCheckout.configure({
   closed: function () {
     resetButtonText();
   },
-  token: function(token) {
+  token: async function(token) {
 
-    fetch(`${LAMBDA_ENDPOINT}purchase`, {
-      method: 'POST',
-      body: JSON.stringify({
-        token,
-        amount,
-        idempotency_key: uuid()
-      }),
-      headers: new Headers({
-        'Content-Type': 'application/json'
-      })
-    })
-    .then(res => res.json())
-    .catch(error => console.error(error))
-    .then(response => {
+    let response, data;
 
-      resetButtonText();
+    try {
+      response = await fetch(LAMBDA_ENDPOINT, {
+        method: 'POST',
+        body: JSON.stringify({
+          token,
+          amount,
+          idempotency_key: uuid()
+        }),
+        headers: new Headers({
+          'Content-Type': 'application/json'
+        })
+      });
 
-      let message = typeof response === 'object' && response.status === 'succeeded'
-        ? 'Charge was successful!'
-        : 'Charge failed.'
-      $messageBox.querySelector('h2').innerHTML = message;
+      data = await response.json();
+    } catch (error) {
+      console.error(error.message);
+      return;
+    }
 
-      console.log(response);
-    });
+    resetButtonText();
+
+    let message = typeof data === 'object' && data.status === 'succeeded'
+      ? 'Charge was successful!'
+      : 'Charge failed.'
+    $messageBox.querySelector('h2').innerHTML = message;
+
+    console.log(data);
   }
 });
 
