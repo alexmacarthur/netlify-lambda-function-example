@@ -8,7 +8,7 @@ const headers = {
   "Access-Control-Allow-Headers": "Content-Type"
 };
 
-exports.handler = async function(event, context, callback) {
+exports.handler = async function(event) {
   // We only care to do anything if this is our POST request.
   if (event.httpMethod !== "POST") {
     return {
